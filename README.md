@@ -48,7 +48,7 @@ $ sudo npm install -g gulp
   ```
   $ ln -s `pwd`/spacewalk-tmux ~/bin/spacewalk-tmux
   ```
-3. Edit the following variables in `spacewalk-tmux` adjusting the self-explanatory values accordingly:
+3. Edit the following variables in `~/bin/spacewalk-tmux` adjusting the self-explanatory values accordingly:
   ```
   SUMA_SERVER_HOST = 'suma31pg.tf.local'
   SUMAFORM_PATH = '/home/mbologna/Development/sumaform'

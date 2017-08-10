@@ -1,10 +1,14 @@
 #!/usr/bin/env ruby
 
+# /!\ Start editing here /!\
+
 SUMA_SERVER_HOST = 'suma31pg.tf.local'
 SUMAFORM_PATH = '/home/mbologna/Development/sumaform'
 SPACEWALK_PATH = '/home/mbologna/Development/spacewalk'
 SPACEWALK_TMUXINATOR_CONFIG_PATH = '/home/mbologna/.tmuxinator'
 LSYNC_CONFIG_PATH = '/home/mbologna'
+
+# /!\ Do not edit past this point! /!\
 
 lsync_js_template_config_file = "sync{
   default.rsyncssh, -- uses the rsyncssh defaults Take a look here: https://github.com/axkibe/lsyncd/blob/master/default-rsyncssh.lua
