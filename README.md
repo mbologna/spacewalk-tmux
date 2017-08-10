@@ -26,7 +26,9 @@ Upon launching, you will be prompted with a tmux session that comprises:
 * tmuxinator
 * gulp
 
-## Dependencies: copy-paste for OpenSUSE
+## Dependencies: copy and paste
+
+If you are running OpenSUSE, you can install all dependencies with:
 
 ```
 $ git clone git@github.com:moio/sumaform.git
@@ -48,11 +50,11 @@ $ sudo npm install -g gulp
   ```
 3. Edit the following variables in `spacewalk-tmux` adjusting the self-explanatory values accordingly:
   ```
-  SUMA_SERVER = 'suma31pg.tf.local'
-  SUMAFORM_DIR = '/home/mbologna/Development/sumaform'
-  SPACEWALK_DIR = '/home/mbologna/Development/spacewalk'
-  SPACEWALK_TMUXINATOR_CONFIG_DIR = '/home/mbologna/.tmuxinator'
-  LSYNC_CONFIG_DIR = '/home/mbologna'
+  SUMA_SERVER_HOST = 'suma31pg.tf.local'
+  SUMAFORM_PATH = '/home/mbologna/Development/sumaform'
+  SPACEWALK_PATH = '/home/mbologna/Development/spacewalk'
+  SPACEWALK_TMUXINATOR_CONFIG_PATH = '/home/mbologna/.tmuxinator'
+  LSYNC_CONFIG_PATH = '/home/mbologna'
   ```
 4. Launch tmux via `$ spacewalk-tmux`
 5. Happy coding!
@@ -62,8 +64,7 @@ $ sudo npm install -g gulp
 1. Clone sumaform and SUSE Manager (or spacewalk).
 2. Install `spacewalk-tmux`:
   ```
-  $ git clone git@github.com:mbologna/spacewalk-tmux.git
-  $ cd spacewalk-tmux
+  $ git clone git@github.com:mbologna/spacewalk-tmux.git && cd spacewalk-tmux
   $ ln -s `pwd`/spacewalk-tmux ~/bin/spacewalk-tmux
   $ vim ~/bin/spacewalk-tmux # change values
   $ spacewalk-tmux
