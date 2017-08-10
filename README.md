@@ -30,21 +30,21 @@ $ sudo npm install -g gulp
 
 1. Clone the project:
   ```
-  git clone git@github.com:mbologna/spacewalk-tmux.git && cd spacewalk-tmux
+  $ git clone git@github.com:mbologna/spacewalk-tmux.git && cd spacewalk-tmux
   ```
 2. Create a symlink somewhere in your PATH (personal preference: `~/bin`):
   ```
-  ln -s `pwd`/spacewalk-tmux ~/bin/spacewalk-tmux
+  $ ln -s `pwd`/spacewalk-tmux ~/bin/spacewalk-tmux
   ```
 3. Edit the following variables in `spacewalk-tmux` adjusting the self-explanatory values accordingly:
   ```
-  SUMA_SERVER="suma31pg.tf.local"
-  SUMAFORM_DIR="/home/mbologna/Development/sumaform"
-  SPACEWALK_DIR="/home/mbologna/Development/spacewalk"
-  SPACEWALK_TMUXINATOR_CONFIG_DIR="/home/mbologna/.tmuxinator"
-  LSYNC_CONFIG_DIR="/home/mbologna"
+  SUMA_SERVER = 'suma31pg.tf.local'
+  SUMAFORM_DIR = '/home/mbologna/Development/sumaform'
+  SPACEWALK_DIR = '/home/mbologna/Development/spacewalk'
+  SPACEWALK_TMUXINATOR_CONFIG_DIR = '/home/mbologna/.tmuxinator'
+  LSYNC_CONFIG_DIR = '/home/mbologna'
   ```
-4. Launch tmux via `spacewalk-tmux`
+4. Launch tmux via `$ spacewalk-tmux`
 5. Happy coding!
 
 ## Usage: TL;DR (robot) version
