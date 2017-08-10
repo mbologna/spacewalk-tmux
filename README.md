@@ -1,8 +1,18 @@
 # Tmuxinated setup for SUSE Manager development
 
+![Demo in action](demo/spacewalk-tmux.json.gif)
+
 ## Introduction
 
 This automated setup creates a tmux environment suitable for developing SUSE Manager (or spacewalk).
+Upon launching, you will be prompted with a tmux session that comprises:
+  * A sumaform configuration editor and prompt to provision it
+  * A Java remote deployment (press Enter to deploy)
+  * A front-end static-resources automated deployer (with `gulp` and `lsyncd`)
+  * A JUnit test runner (press Enter to launch tests) with configuration editor
+  * A Checkstyle runner (press Enter to checkstyle)
+  * A tig client to access SCM
+  * A SSH window inside the development server with a split window `tail`ed on logs
 
 ## Dependencies
 
