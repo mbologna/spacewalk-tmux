@@ -14,8 +14,8 @@
 
 ## Usage
 
-* Download `spacewalk-tmux.rb` and place it in your PATH (`~/bin`)
-* Edit the following variables in `spacewalk-tmux.rb` adjust values accordingly:
+* Download `spacewalk-tmux` and place it somewhere in your PATH (personal preference: `~/bin`)
+* Edit the following variables in `spacewalk-tmux` adjusting values accordingly:
 
 ```
 SUMA_SERVER="suma31pg.tf.local"
