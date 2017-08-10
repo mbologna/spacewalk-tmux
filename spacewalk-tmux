@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
-SUMA_SERVER="suma31pg.tf.local"
-SUMAFORM_DIR="/home/mbologna/Development/sumaform"
-SPACEWALK_DIR="/home/mbologna/Development/spacewalk"
-SPACEWALK_TMUXINATOR_CONFIG_DIR="/home/mbologna/.tmuxinator"
-LSYNC_CONFIG_DIR="/home/mbologna"
+SUMA_SERVER = 'suma31pg.tf.local'.freeze
+SUMAFORM_DIR = '/home/mbologna/Development/sumaform'.freeze
+SPACEWALK_DIR = '/home/mbologna/Development/spacewalk'.freeze
+SPACEWALK_TMUXINATOR_CONFIG_DIR = '/home/mbologna/.tmuxinator'.freeze
+LSYNC_CONFIG_DIR = '/home/mbologna'.freeze
 
 lsync_js_template_config_file = "sync{
   default.rsyncssh, -- uses the rsyncssh defaults Take a look here: https://github.com/axkibe/lsyncd/blob/master/default-rsyncssh.lua
@@ -84,9 +84,9 @@ windows:
         - ssh #{SUMA_SERVER}
         - ssh #{SUMA_SERVER} 'tail -F /var/log/rhn/*.log'"
 
-Dir.mkdir(LSYNC_CONFIG_DIR) unless File.exists?(LSYNC_CONFIG_DIR)
+Dir.mkdir(LSYNC_CONFIG_DIR) unless File.exist?(LSYNC_CONFIG_DIR)
 File.open(LSYNC_CONFIG_DIR + "/.lsync_js.conf", 'w') { |file| file.write(lsync_js_template_config_file) }
 File.open(LSYNC_CONFIG_DIR + "/.lsync_css.conf", 'w') { |file| file.write(lsync_css_template_config_file) }
-Dir.mkdir(SPACEWALK_TMUXINATOR_CONFIG_DIR) unless File.exists?(SPACEWALK_TMUXINATOR_CONFIG_DIR)
+Dir.mkdir(SPACEWALK_TMUXINATOR_CONFIG_DIR) unless File.exist?(SPACEWALK_TMUXINATOR_CONFIG_DIR)
 File.open(SPACEWALK_TMUXINATOR_CONFIG_DIR + "/spacewalk.yml", 'w') { |file| file.write(tmuxinator_template_config_file) }
 `tmuxinator start spacewalk`
