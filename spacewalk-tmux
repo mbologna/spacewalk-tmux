@@ -50,7 +50,7 @@ tmuxinator_template_config_file = "# ~/.tmuxinator/spacewalk.yml
 
 name: spacewalk
 root: ~
-#tmux_command: byobu
+tmux_command: byobu
 startup_pane: 1
 
 windows:
