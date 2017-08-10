@@ -8,6 +8,7 @@
 * tmuxinator (`sudo gem install tmuxinator`)
 * lsyncd (`sudo zypper in lsyncd`)
 * gulp (`sudo npm install -g gulp`)
+* tig (`sudo zypper in tig`)
 * [sumaform](https://github.com/moio/sumaform)
 * SUSE Manager or spacewalk
 
