@@ -13,8 +13,8 @@ This automated setup creates a tmux environment suitable for developing SUSE Man
 * lsyncd
 * nodejs
 * tig
-* tmuxinator (`sudo gem install tmuxinator`)
-* gulp (`sudo npm install -g gulp`)
+* tmuxinator
+* gulp
 
 ## Dependencies: copy-paste for OpenSUSE
 
