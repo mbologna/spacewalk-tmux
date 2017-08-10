@@ -2,15 +2,33 @@
 
 ## Introduction
 
+This automated setup creates a tmux environment suitable for developing SUSE Manager and spacewalk.
+
 ## Dependencies
 
-* ruby (`sudo zypper in ruby`)
-* tmuxinator (`sudo gem install tmuxinator`)
-* lsyncd (`sudo zypper in lsyncd`)
-* gulp (`sudo npm install -g gulp`)
+* ruby
+* tmux
+* lsyncd
+* nodejs
 * tig (`sudo zypper in tig`)
+* tmuxinator (`sudo gem install tmuxinator`)
+* gulp (`sudo npm install -g gulp`)
 * [sumaform](https://github.com/moio/sumaform)
 * SUSE Manager or spacewalk
+
+## TL;DR
+
+1. Checkout sumaform and spacewalk
+2. ```
+$ sudo zypper in ruby lsyncd nodejs tmux tig
+$ sudo gem install tmuxinator
+$ sudo npm install -g gulp
+$ git clone git@github.com:mbologna/spacewalk-tmux.git 
+$ cd spacewalk-tmux
+$ ln -s `pwd`/spacewalk-tmux ~/bin/spacewalk-tmux
+$ vim `which spacewalk-tmux`
+$ spacewalk-tmux
+```
 
 ## Usage
 
