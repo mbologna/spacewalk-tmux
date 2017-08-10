@@ -44,8 +44,6 @@ lsync_css_template_config_file = "sync{
   }
 }"
 
-File.open(LSYNC_CONFIG_DIR + "/.lsync_js.conf", 'w') { |file| file.write(lsync_js_template_config_file) }
-File.open(LSYNC_CONFIG_DIR + "/.lsync_css.conf", 'w') { |file| file.write(lsync_css_template_config_file) }
 tmuxinator_template_config_file = "# ~/.tmuxinator/spacewalk.yml
 
 name: spacewalk
@@ -86,6 +84,9 @@ windows:
         - ssh #{SUMA_SERVER}
         - ssh #{SUMA_SERVER} 'tail -F /var/log/rhn/*.log'"
 
+Dir.mkdir(LSYNC_CONFIG_DIR) unless File.exists?(LSYNC_CONFIG_DIR)
+File.open(LSYNC_CONFIG_DIR + "/.lsync_js.conf", 'w') { |file| file.write(lsync_js_template_config_file) }
+File.open(LSYNC_CONFIG_DIR + "/.lsync_css.conf", 'w') { |file| file.write(lsync_css_template_config_file) }
 Dir.mkdir(SPACEWALK_TMUXINATOR_CONFIG_DIR) unless File.exists?(SPACEWALK_TMUXINATOR_CONFIG_DIR)
 File.open(SPACEWALK_TMUXINATOR_CONFIG_DIR + "/spacewalk.yml", 'w') { |file| file.write(tmuxinator_template_config_file) }
 `tmuxinator start spacewalk`
